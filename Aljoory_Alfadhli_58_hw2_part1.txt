@@ -1,0 +1,29 @@
+// Program to return the Grade of the student score
+// By Aljoory Alfadhli - 58
+
+class Main {
+  public static void main(String []args){
+        int[] studentPercentage={70,90,30,90,80,84,69,92,63,45}; // Students Score
+        char[] letterGrades= new char[10];  // Student Grade
+        for(int i=0;i<studentPercentage.length;i++){      // Print score and call getGrade function
+            System.out.println("Student #"  + (i+1));
+            System.out.println("~~~~~~~~~~~");
+            System.out.println("Score is =" + studentPercentage[i]);
+            letterGrades[i]=GetGrade(studentPercentage[i]);
+            System.out.println("Grade is :" + letterGrades[i] + "\n"); 
+            }        
+        }
+     
+        public static char GetGrade(int grade){  // Function to return the Grade of the student
+        if (grade>=90)
+           return 'A';
+        else if (grade>=80)
+            return 'B';
+        else if(grade>=70)
+             return 'C';
+        else if(grade>=60)
+             return 'D';
+        else 
+              return 'F';
+        }
+}
