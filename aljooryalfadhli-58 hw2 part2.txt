@@ -1,0 +1,29 @@
+public class Main{
+
+public static void main(String []args){
+        int[] studentPercentage=new int[10];
+        char[] letterGrades= new char[10];
+        int z=1;
+        for(int x=0;x<10;x++)
+            studentPercentage[x]=(int)(Math.random() * 100 + 1);
+        for(int i : studentPercentage ){
+            System.out.println("Student #"  + z ) ;
+            z++;
+            System.out.println("~~~~~~~~~~~");
+            System.out.println("Score = " + i);
+            System.out.println("Grade is: " + GetGrade(i) + "\n"); 
+        }
+     }
+         public static char GetGrade(int grade){ 
+        if (grade>=90)
+           return 'A';
+        else if (grade>=80)
+            return 'B';
+        else if(grade>=70)
+             return 'C';
+        else if(grade>=60)
+             return 'D';
+        else 
+              return 'F';
+}
+}
